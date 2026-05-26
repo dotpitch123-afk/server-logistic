@@ -5,7 +5,6 @@ const packingRoutes = require("./routes/track");
 const auth = require('./routes/user')
 require("dotenv").config();
 const app = express();
-// const paymentorder = require("./routes/Payment")
 const  PlanRoutes = require("./routes/Payment");
 const subscriptionRoutes = require("./routes/subscription");
 connectDB();
@@ -16,7 +15,6 @@ app.use(express.json());
 app.use('/', packingRoutes);
 app.use("/api", auth);
 app.use('/api',Chatbot)
-// app.use("/api/payment",paymentorder)
 app.use("/api", PlanRoutes);
 app.use("/api", subscriptionRoutes);
 app.get('/test', (req, res) => {

@@ -2,8 +2,9 @@
 const mongoose = require('mongoose');
 
 const connectDB = async () => {
+  let db ="mongodb+srv://dotpitch123_db_user:2prwOa1mEJwijfwH@cluster0.ffga0v5.mongodb.net/dotpitchDB?retryWrites=true&w=majority"
   try {
-    await mongoose.connect('mongodb+srv://manishpdotpitchtechnologies:OAQV5V2rqEpFYAnG@cluster0.ooxxw1c.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
+    await mongoose.connect(db, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
 
